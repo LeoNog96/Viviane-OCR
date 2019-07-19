@@ -31,12 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # APPs instalados
+    'rest_framework',
+    # Apps do Projeto
+    'viviane_ocr.ocr',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +55,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'viviane_ocr.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 TEMPLATES = [
     {
