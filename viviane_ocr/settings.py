@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # Apps do Projeto
     'viviane_ocr.ocr',
+    'viviane_ocr.users',
 ]
 
 MIDDLEWARE = [

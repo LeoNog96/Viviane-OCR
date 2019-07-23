@@ -1,5 +1,0 @@
-django >=2.2.3
-django-cors-headers >= 3.0.2
-djangorestframework >= 3.9.4
-textract>=1.6.1
-beautifulsoup4>=4.7.1 

@@ -1,0 +1,9 @@
+django >=2.2.3
+django-cors-headers >= 3.0.2
+djangorestframework >= 3.9.4
+django-filter >== 2.2.0
+django-phonenumber-field >==3.0.1
+phonenumbers >== 8.10.15
+beautifulsoup4==4.5.3
+https://github.com/mattgwwalker/msg-extractor/zipball/master
+textract>=1.6.1
