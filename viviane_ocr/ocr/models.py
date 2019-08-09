@@ -13,6 +13,8 @@ class File(models.Model):
 
     upload_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    done = models.BooleanField(default=False)
+
     class Meta:
 
         db_table = 'files'
