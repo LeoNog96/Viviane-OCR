@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+from kombu import Exchange, Queue
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -80,7 +80,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'viviane_ocr.wsgi.application'
 
+BROKER_URL = 'redis://localhost:6379/'
 
+task_default_queue = 'default' #1
+default_exchange = Exchange('media', type='direct') #2
+task_queues = (
+    Queue(
+        'media_queue', #3
+        exchange=default_exchange, #4
+        routing_key='video' #5
+    )
+)
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
